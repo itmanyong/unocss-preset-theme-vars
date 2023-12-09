@@ -1,0 +1,63 @@
+{
+  "name": "unocss-preset-css-vars",
+  "type": "module",
+  "version": "0.0.5",
+  "packageManager": "pnpm@8.12.0",
+  "description": "基于css变量方案的unocss主题配置动态化",
+  "author": "Itmanyong <itmanyong@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/itmanyong/unocss-preset-css-vars#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itmanyong/unocss-preset-css-vars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itmanyong/unocss-preset-css-vars/issues"
+  },
+  "keywords": [
+    "itmanyong",
+    "unocss",
+    "unocss-preset",
+    "unocss-css-var",
+    "unocss-preset-css-vars"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "*.css",
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@unocss/core": ">= 0.57.3"
+  },
+  "dependencies": {
+    "@unocss/core": "0.58.0",
+    "@unocss/rule-utils": "0.58.0",
+    "@ant-design/colors": "7.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.4.3",
+    "@types/node": "20.10.4",
+    "@unocss/preset-uno": "0.58.0",
+    "bumpp": "9.2.0",
+    "eslint": "8.55.0",
+    "typescript": "5.3.3",
+    "unbuild": "2.0.0"
+  }
+}
