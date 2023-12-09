@@ -40,6 +40,8 @@ jobs:
           git config --local user.name "itmanyong"
           git commit -am "Sync package.json version with tag"
           git push
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: PNPM build
         run: pnpm run build
