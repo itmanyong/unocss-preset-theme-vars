@@ -23,25 +23,11 @@ jobs:
           cache: pnpm
           registry-url: "https://registry.npmjs.org"
 
-      - run: npx changelogithub
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
       - name: Install Dependencies
         run: pnpm i
 
       - name: Sync version
         run: npm version --no-git-tag-version ${GITHUB_REF#refs/tags/}
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "itmanyong@github.com"
-          git config --local user.name "itmanyong"
-          git commit -am "Sync package.json version with tag"
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN_ALL}}
 
       - name: PNPM build
         run: pnpm run build
