@@ -34,6 +34,13 @@ jobs:
       - name: Sync version
         run: npm version --no-git-tag-version ${GITHUB_REF#refs/tags/}
 
+      - name: Commit changes
+      run: |
+        git config --local user.email "itmanyong@github.com"
+        git config --local user.name "itmanyong"
+        git commit -am "Sync package.json version with tag"
+        git push
+
       - name: PNPM build
         run: pnpm run build
 
