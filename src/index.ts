@@ -26,7 +26,7 @@ function generateThemeVars(
   ) as Record<string, string | Record<string, string>>;
   let cssVars: Record<string, any> = {};
   const paletteOps = {
-    theme: mode === "dark" ? "dark" : "default" as any,
+    theme: mode === "dark" ? "dark" : ("default" as any),
     backgroundColor: baseColor,
   };
   cssVars.base = {
@@ -159,4 +159,8 @@ function presetThemeVars(themeSettings?: ThemeSetting[]) {
   };
 }
 
-export { presetThemeVars };
+export {
+  presetThemeVars,
+  generateThemeVars,
+  parseThemeVarsToCss,
+};

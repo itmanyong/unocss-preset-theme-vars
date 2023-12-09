@@ -3,7 +3,7 @@ export type Values<T> = T extends Record<string, any> ? T[keyof T] : never;
 
 export interface ThemeSetting {
   name: string;
-  mode: 'dark' | 'light';
+  mode: "dark" | "light";
   baseColor?: string;
   isDefault?: boolean;
   primaryColors?: Record<string, any>;
