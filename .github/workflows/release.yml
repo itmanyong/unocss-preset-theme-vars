@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "itmanyong@github.com"
           git config --local user.name "itmanyong"
           git commit -am "Sync package.json version with tag"
-          git push
+          git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
