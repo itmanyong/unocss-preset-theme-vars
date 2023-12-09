@@ -23,11 +23,13 @@ jobs:
           cache: pnpm
           registry-url: "https://registry.npmjs.org"
 
+      - run: npx changelogithub
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
       - name: Install Dependencies
         run: pnpm i
-
-      - name: Sync version
-        run: npm version --no-git-tag-version ${GITHUB_REF#refs/tags/}
 
       - name: PNPM build
         run: pnpm run build
