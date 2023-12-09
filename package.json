@@ -1,25 +1,25 @@
 {
-  "name": "unocss-preset-css-vars",
+  "name": "unocss-preset-theme-vars",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.12.0",
   "description": "基于css变量方案的unocss主题配置动态化",
   "author": "Itmanyong <itmanyong@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/itmanyong/unocss-preset-css-vars#readme",
+  "homepage": "https://github.com/itmanyong/unocss-preset-theme-vars#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itmanyong/unocss-preset-css-vars.git"
+    "url": "git+https://github.com/itmanyong/unocss-preset-theme-vars.git"
   },
   "bugs": {
-    "url": "https://github.com/itmanyong/unocss-preset-css-vars/issues"
+    "url": "https://github.com/itmanyong/unocss-preset-theme-vars/issues"
   },
   "keywords": [
     "itmanyong",
     "unocss",
     "unocss-preset",
-    "unocss-css-var",
-    "unocss-preset-css-vars"
+    "unocss-theme-var",
+    "unocss-preset-theme-vars"
   ],
   "sideEffects": false,
   "exports": {
